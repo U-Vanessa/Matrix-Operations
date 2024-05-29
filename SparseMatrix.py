@@ -68,16 +68,16 @@ class SparseMatrix:
                     result.setElement(row1, col2, result.getElement(row1, col2) + value1 * value2)
         return result
 
-    def write_to_file(self, filepath, operation, other, result):
+    def write_to_file(self, filepath, operation_name, result):
         with open(filepath, 'w') as file:
-            file.write(f"{operation} result of matrices from {filepath} and {other}:\n")
+            file.write(f"{operation_name} result of matrices:\n")
             for (row, col), value in result.elements.items():
                 file.write(f"({row}, {col}, {value})\n")
 
 def main():
     import sys
     if len(sys.argv) != 4:
-        print("Usage: python SparseMatrix.py <operation> <matrix_file_1> <matrix_file_2>")
+        print("Usage: python3 SparseMatrix.py <operation> <matrix_file_1> <matrix_file_2>")
         return
 
     operation = sys.argv[1].lower()
@@ -100,8 +100,9 @@ def main():
         print("Invalid operation. Choose from add, subtract, multiply.")
         return
 
-    result.write_to_file('results.txt', operation_name, file2, result)
+    result.write_to_file('results.txt', operation_name, result)
     print(f"{operation_name} result written to results.txt")
 
 if __name__ == "__main__":
     main()
+
