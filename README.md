@@ -1,7 +1,7 @@
 # Matrix-Operations
 
 
-This project implements a `SparseMatrix` class in Python, which provides functionalities to load sparse matrices from files, perform matrix operations (addition, subtraction, multiplication), and save the results to files. The matrices are represented in a space-efficient manner by storing only the non-zero elements.
+This project implements a `Matrix-Operations` class in Python, which provides functionalities to load sparse matrices from files, perform matrix operations (addition, subtraction, multiplication), and save the results to files. The matrices are represented in a space-efficient manner by storing only the non-zero elements.
 
 ## Features
 
@@ -28,16 +28,25 @@ cols=<number of columns>
 (row, col, value)
 
 rows= 3
+
 cols= 3
 
 (0, 0, 1)
+
 (0, 1, 2)
+
 (0, 2, 3)
+
 (1, 0, 4)
+
 (1, 1, 5)
+
 (1, 2, 6)
+
 (2, 0, 7)
+
 (2, 1, 8)
+
 (2, 2, 9)
 
 
